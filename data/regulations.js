@@ -1,4 +1,4 @@
-export const requlations = {
+const requlations = {
     "16": [
         {   
             "0": [
