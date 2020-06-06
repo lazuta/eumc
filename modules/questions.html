@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
+    <meta name="description" content="Web site created using create-react-app"/>
+    <link rel="stylesheet" href="../style.css">
+
+    <title>БГАС: Электронный учебно-методический комплекс</title>
+</head>
+<body>
+<div id="root">
+    <section class="index1">
+        <div class="index2">
+            <div class="textBody">
+                <img src="../images/bsac_logo.png" class="imageBody"/>
+                <h1>Электронный учебно-методический комплекс</h1>
+                <p>по дисциплине</p>
+                <h2>"Специальная подготовка"</h2>
+                <p>для специальности</p>
+                <p>ВУС 403290 - Начальник аппаратной</p>
+            </div>
+        </div>
+
+        <div class="test">
+            <div class="testBody">
+                <div class="testQuestion">
+                    <h5 class="testTitleH5">Введите Ваши данные</h5>
+                </div>
+                <div class="testAnswers">
+                    <div class="login">
+                        <input type="text" id="testStartName" placeholder="Ф.И.О" maxLength="30"/>
+                        <button class="StartTest" onClick="start()">Начать тест</button>
+                    </div>
+                </div>
+                <div class="testButton">
+                    <button class="nextQuestion" onClick="nextQuestion()">Следющий вопрос</button>
+                    <button class="finishTest" onClick="finish()">Завершить тест</button>
+                    <button class="repiatTest" onClick="start()">Пройти заново</button>
+                </div>
+            </div>
+        </div>
+
+        <a class="by" href="power.html">BY</a>
+
+        <nav class="navigation">
+            <a href="../index.html">Главная</a>
+            <a href="./practice.html">Практика</a>
+            <a href="./control.html">Контроль знаний</a>
+            <a href="./materials.html">Материал</a>
+            <a href="./gallery.html">Фото и видео</a>
+        </nav>
+    </section>
+</div>
+
+<script src='../data/t1.js'></script>
+<script src='../data/t2.js'></script>
+<script src='../data/t3.js'></script>
+<script>
+    let step = 0;
+    let trueAnswer;
+    let counter;
+    let data = {};
+
+    function start() {
+        let tmp;
+        step = 0;
+        counter = 0;
+
+        if (localStorage.getItem('id')) {
+            let storage = localStorage.getItem('id');
+
+            if (storage === "t1") {
+                data = t1;
+            } else if (storage === "t2") {
+                data = t2;
+            } else if (storage === "t3") {
+                data = t3;
+            }
+
+            console.log(data);
+        } else {
+            data = t1;
+        }
+
+        console.log(data);
+
+        document.querySelector('.finishTest').style.display = "none";
+        document.querySelector('.repiatTest').style.display = "none";
+
+        let result = document.querySelector('.TotalResultInput');
+        if (result) {
+            result.style.display = "none";
+        }
+
+        if (!localStorage.getItem(data.id)) {
+            tmp = {
+                'id_test': data.id,
+                'name': document.querySelector('#testStartName').value,
+                'true_answers': 0,
+                'answers': data.totalQuestions,
+                'assessment': 0,
+                'date': Date.now()
+            }
+        } else {
+            tmp = {
+                'id_test': data.id,
+                'name': localStorage.getItem(data.id).name,
+                'true_answers': 0,
+                'answers': data.totalQuestions,
+                'assessment': 0,
+                'date': Date.now()
+            }
+
+            alert("Вы уже проходили данный тест. Предыдущий результат будет стерт.");
+        }
+
+        let login = document.querySelector('.login');
+        if (login) {
+            login.remove();
+        }
+
+        localStorage.setItem(data.id, JSON.stringify(tmp));
+
+        anstrueAnswerwer = show(step);
+    }
+
+    function nextQuestion() {
+        check();
+
+        let body = document.querySelector('.testAnswers');
+
+        body.innerHTML = "";
+
+        step++;
+        show(step);
+    }
+
+    function check() {
+        let question = data.questions[step].variants;
+
+        for (let i = 0; i <= question.length - 1; i++) {
+            let input = document.getElementById('answer' + i);
+
+            if (input.checked === true && input.value === trueAnswer) {
+                counter++;
+                break;
+            }
+        }
+    }
+
+    function finish() {
+        check();
+
+        let body = document.querySelector('.testAnswers');
+
+        let questionTitle = document.querySelector('.testTitleH5');
+        questionTitle.innerHTML = "Результат:";
+
+        let total = Math.round((10 / data.totalQuestions) * counter);
+
+        let button = document.querySelector('.repiatTest');
+        button.style.display = "block";
+
+        document.querySelector('.nextQuestion').style.display = 'none';
+        document.querySelector('.finishTest').style.display = 'none';
+
+        body.innerHTML = '';
+        body.innerHTML = `
+            <div class = "TotalResultInput">
+                ${total}
+            </div>
+        `;
+
+        localStorage.getItem(data.id);
+    }
+
+    function show(step) {
+        let answer;
+        let question = data.questions[step];
+
+        let questionTitle = document.querySelector('.testTitleH5');
+        console.log(step)
+        questionTitle.innerHTML = "Вопрос " + (step + 1) + " - " + question.title;
+
+        let body = document.querySelector('.testAnswers');
+
+        question.variants.map(function (el, index) {
+            body.innerHTML += `
+                <div class = "testBlockInput">
+                    <input type = "checkbox" id = "answer${index}" value = "${el.title}"/>
+                    <label for = "answer${index}" class = "labelTest">
+                        ${el.title}
+                    </label>
+                </div>
+                <div>
+
+                </div>
+            `;
+
+            if (el.flag) {
+                answer = el.title;
+            }
+        });
+
+        let next = document.querySelector('.nextQuestion');
+        let finish = document.querySelector('.finishTest');
+
+        if (step < data.questions.length - 1) {
+            next.style.display = 'block';
+        } else if (step === data.questions.length - 1) {
+            next.style.display = 'none';
+            finish.style.display = 'block';
+        }
+
+        trueAnswer = answer;
+    }
+</script>
+</body>
+</html>

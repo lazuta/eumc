@@ -23,33 +23,21 @@
             </div>
         </div>
 
-        <div class="ContainerProgramm">
-            <h4>Разработано BY</h4>
-            <img src="../images/logo.png"/>
-            <h4>Под руководством</h4>
-            <code class="admin">Способ Сергей Павлович</code>
-            <h4>Совместно с</h4>
-            <code>Никита Гусев</code>
-            <code>Паша Серый</code>
-            <code>Андрей Ванхадло</code>
-            <code>Роман Язёнок</code>
-            <code>Кирилл Ахремчик</code>
-            <code>Лёша Коновалов</code>
-            <code>Макcим Буян</code>
-            <code>Олег Пашук</code>
-            <code>Влад Павлють</code>
-            <code>Самуил Рыбаков</code>
-            <code>Алексей Колос</code>
-            <code>Валерий Галынин</code>
-            <code>Никита Буевич</code>
-            <code>Глеб Голуб</code>
-            <code>Роман Калашников</code>
-            <code>Артём Кульгавчук</code>
-            <code>Дмитрий Дмитриев</code>
-            <code>Паша Бутько</code>
+        <div class="control">
+            <div>
+                <h1 class="controlTitle">Тесты по материалу</h1>
+            </div>
+            <div class="controleLinks">
+                <a href="./questions.html" onClick="setTest('t1')"> Тест 1: Основы построения многоканальных
+                    систем передачи </a>
+                <a href="./questions.html" onClick="setTest('t2')"> Тест 2: Устройство и эксплуотация
+                    многоканальных систем </a>
+                <a href="./questions.html" onClick="setTest('t3')"> Тест 3: Техническое обслуживание аппаратной
+                    П-178МБ </a>
+            </div>
         </div>
 
-        <a class="by" href="./power.html">BY</a>
+        <a class="by" href="power.html">BY</a>
 
         <nav class="navigation">
             <a href="../index.html">Главная</a>
@@ -60,5 +48,11 @@
         </nav>
     </section>
 </div>
+
+<script>
+    function setTest(id) {
+        localStorage.setItem('id', id)
+    }
+</script>
 </body>
 </html>

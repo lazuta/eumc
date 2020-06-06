@@ -1,86 +1,85 @@
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Arial', 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
     overflow-x: hidden;
-  }
-  
-  ::-webkit-scrollbar { 
-    width: 0px;  /* ширина scrollbar'a */
-    background: transparent;  /* опционально */
-  }
+}
 
+::-webkit-scrollbar {
+    width: 0px; /* ширина scrollbar'a */
+    background: transparent; /* опционально */
+}
 
-  html {
-    -ms-overflow-style: none;  /* IE 10+ */
+html {
+    -ms-overflow-style: none; /* IE 10+ */
     scrollbar-width: none; /* Firefox */
     background-color: #20232A;
-  }
-  
-  code {
+}
+
+code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-  }
-    
-  .index2 {
+}
+
+.index2 {
     height: 300px;
     width: 100%;
     background-image: linear-gradient(to top, #20232A 0%, transparent 50%), url('./images/bg.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  
-  .index1 {
+}
+
+.index1 {
     width: 100%;
     min-height: 100vh;
     background: #20232A;
-  }
+}
 
-  .textBody {
+.textBody {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
     color: white;
-  }
-  
-  .imageBody {
+}
+
+.imageBody {
     margin: 50px auto 0px auto;
     height: 50px;
     width: 50px;
-  }
-  
-  .textBody h1{
+}
+
+.textBody h1 {
     font-size: 1em;
     line-height: 1.5em;
     margin: 15px 0px 0px 0px;
     padding: 0;
     font-weight: 400;
-  }
-  
-  .textBody p{
+}
+
+.textBody p {
     font-size: 1em;
     line-height: 1.5em;
     font-weight: 400;
     margin: 0;
     padding: 0;
-  }
-  
-  .textBody h2{
+}
+
+.textBody h2 {
     font-size: 2em;
     line-height: 1.4em;
     margin: 0px;
     padding: 0;
     font-weight: 500;
     text-transform: uppercase;
-  }
-  
-  .navigation {
+}
+
+.navigation {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -91,15 +90,15 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.164);
     position: fixed;
     z-index: 999999;
-  }
-  
-  .navigation {
+}
+
+.navigation {
     display: flex;
     justify-content: space-around;
-    flex-direction: row;  
-  }
-  
-  .navigation a {
+    flex-direction: row;
+}
+
+.navigation a {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -112,16 +111,16 @@ body {
     width: 100%;
     transition: 1.5s;
     text-align: center;
-  }
-  
-  .navigation a:hover {
+}
+
+.navigation a:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.137);
     transition: .5s;
-  }
-  
-  
-  .MenuElement {
+}
+
+
+.MenuElement {
     width: 240px;
     height: 320px;
     overflow: hidden;
@@ -129,32 +128,32 @@ body {
     border-radius: 10px;
     margin: 10px;
     transition: .5s;
-  }
-  
-  .MenuElement:hover {
+}
+
+.MenuElement:hover {
     cursor: pointer;
     transform: scaleX(5px);
     transition: .5s;
     box-shadow: 0px 2px 2px 2px rgba(0, 0, 255, 0.418);
-  }
-  
-  .El-Bg {
+}
+
+.El-Bg {
     height: 320px;
     min-width: 240px;
     display: flex;
     justify-content: center;
     position: relative;
-  }
-  
-  .El-Bg img {
+}
+
+.El-Bg img {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     height: 320px;
     filter: blur(2px);
-  }
-  
-  .El-Body {
+}
+
+.El-Body {
     height: 320px;
     width: 240px;
     position: absolute;
@@ -165,116 +164,116 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .El-container {
+}
+
+.El-container {
     height: 92%;
     width: 90%;
     border: 2px solid white;
     border-radius: 10px;
     display: flex;
     align-items: flex-end;
-  }
-  
-  .El-container p {
+}
+
+.El-container p {
     text-transform: uppercase;
     font-size: 1.5em;
     color: aliceblue;
     font-weight: 500;
-  }
-  
-  .ContainerProgramm {
+}
+
+.ContainerProgramm {
     width: 800px;
     margin: 0 auto;
     padding: 10px;
     color: white;
-  }
-  
-  .theory {
+}
+
+.theory {
     padding: 10px;
     max-width: 800px;
     margin: 30px auto;
-  }
-  
-  .topic {
+}
+
+.topic {
     font-size: 22px;
     font-weight: bold;
-  }
-  
-  .theory-el {
-   width: 100%;
-   padding: 20px;
-  }
-  
-  .theory-el a {
-    color: white; 
+}
+
+.theory-el {
+    width: 100%;
+    padding: 20px;
+}
+
+.theory-el a {
+    color: white;
     transition: .5s;
     text-decoration: none;
-  }
-  
-  
-  .theory-el a:hover {
+}
+
+
+.theory-el a:hover {
     color: brown;
     transition: .5s;
-   }
-  
-  
-   .topic {
+}
+
+
+.topic {
     color: rgba(108, 106, 255, 0.719);
-   }
-  
-  .list {
+}
+
+.list {
     max-width: 860px;
     margin: 0 auto;
     padding: 5px;
     color: rgba(255, 255, 255, 0.664);
     margin-bottom: 50px;
     margin-top: 30px;
-  }
-  
-  .list h1 {
+}
+
+.list h1 {
     margin-top: 15px;
     margin-bottom: 50px;
     text-align: center;
     color: rgba(255, 255, 255, 0.884);
-  
-  }
-  
-  .list .image {
+
+}
+
+.list .image {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin: 20px 0;
-  }
-  
-  .list .image div {
+}
+
+.list .image div {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-  
-  .list .text {
+}
+
+.list .text {
     text-indent: 1.5em;
     text-align: justify;
-  }
-  
-  .list h2 {
+}
+
+.list h2 {
     margin-bottom: 2px;
     text-align: center;
-  }
-  
-  .list hr {
+}
+
+.list hr {
     margin-top: 30px;
     margin-bottom: 30px;
-  }
-  
-  .imageFlex {
+}
+
+.imageFlex {
     display: flex;
     justify-content: center;
-  }
-  
-  .question {
+}
+
+.question {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -282,36 +281,36 @@ body {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 50px;
-  }
-  
-  
-  .q-Title {
+}
+
+
+.q-Title {
     color: white;
     text-align: center;
     text-transform: uppercase;
     font-weight: 800;
     font-size: 18px;
-  }
-  
-  .q-question {
+}
+
+.q-question {
     color: white;
     font-weight: 500;
-  }
-  
-  .q-Input {
+}
+
+.q-Input {
     color: rgba(255, 255, 255, 0.808);
     font-style: italic;
     font-size: 14px;
     display: flex;
     justify-content: left;
     flex-direction: row;
-  }
-  
-  .q-Input input {
+}
+
+.q-Input input {
     margin-right: 5px;
-  }
-  
-  .q-Button {
+}
+
+.q-Button {
     display: flex;
     justify-content: center;
     margin: 20px auto 10px auto;
@@ -322,95 +321,95 @@ body {
     font-weight: 500;
     transition: 2s;
     text-transform: uppercase;
-  }
-  
-  .q-Button:hover {
+}
+
+.q-Button:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.137);
     transition: 1s;
-  }
-  
-  .q-Button:disabled {
+}
+
+.q-Button:disabled {
     background-color: rgba(250, 25, 25, 0.137);
-  }
-  
-  .q-container {
+}
+
+.q-container {
     max-width: 800px;
     margin: 0 auto;
-  }
-  
-  .q-list {
+}
+
+.q-list {
     color: white;
     font-size: 16px;
-  }
-  
-  .q-Input div input:hover {
+}
+
+.q-Input div input:hover {
     cursor: pointer;
     border: 1px solid crimson;
-  }
-  
-  .control {
+}
+
+.control {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .controlTitle {
+}
+
+.controlTitle {
     color: aliceblue;
-  }
-  
-  .controleLinks {
+}
+
+.controleLinks {
     display: flex;
     justify-content: left;
     flex-direction: column;
     margin: 20px auto 0px auto;
     max-width: 800px;
-  }
-  
-  .controleLinks a {
+}
+
+.controleLinks a {
     color: white;
     text-decoration: none;
     transition: .5s;
     margin: 5px;
-  }
-  
-  
-  .controleLinks a:hover {
+}
+
+
+.controleLinks a:hover {
     color: brown;
     transition: .5s;
-   }
-  
-  .test {
+}
+
+.test {
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 420px;
     margin: 0 auto;
-  }
-  
-  .testBody {
+}
+
+.testBody {
     display: flex;
     justify-content: center;
     flex-direction: column;
     width: 100%;
     color: white;
-  }
-  
-  .testQuestion {
+}
+
+.testQuestion {
     text-align: center;
-  }
-  
-  .login {
+}
+
+.login {
     text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
     max-width: 320px;
     margin: 0 auto;
-  }
-  
-  #testStartName {
+}
+
+#testStartName {
     background-color: #20232A;
     border: 1px solid white;
     padding: 10px 15px;
@@ -419,17 +418,17 @@ body {
     color: white;
     font-weight: 300;
     font-style: italic;
-  }
-  
-  .testTitleH5 {
+}
+
+.testTitleH5 {
     color: white;
     font-size: 16px;
     font-weight: 400;
     text-align: left;
     margin-bottom: 10px;
-  }
-  
-  .StartTest {
+}
+
+.StartTest {
     margin-top: 20px;
     background-color: rgba(0, 0, 255, 0.137);
     border: 1px solid white;
@@ -438,29 +437,29 @@ body {
     transition: .5s;
     padding: 10px 15px;
     width: 320px;
-  }
-  
-  .StartTest:hover {
+}
+
+.StartTest:hover {
     cursor: pointer;
     border: 2px solid rgba(0, 0, 255, 0.137);
     background: #20232A;
     transition: .5s;
-  }
-  
-  .testAnswers {
+}
+
+.testAnswers {
     display: flex;
     flex-direction: column;
     justify-content: left;
-  }
-  
-  .testButton {
+}
+
+.testButton {
     text-align: center;
     margin-bottom: 100px;
-  }
-  
-  .nextQuestion,
-  .finishTest,
-  .repiatTest {
+}
+
+.nextQuestion,
+.finishTest,
+.repiatTest {
     display: none;
     margin-top: 20px;
     background-color: rgba(0, 0, 255, 0.137);
@@ -470,44 +469,44 @@ body {
     transition: .5s;
     padding: 10px 15px;
     width: 200px;
-  }
-  
-  
-  .nextQuestion:hover,
-  .finishTest:hover,
-  .repiatTest:hover {
+}
+
+
+.nextQuestion:hover,
+.finishTest:hover,
+.repiatTest:hover {
     cursor: pointer;
     border: 2px solid rgba(0, 0, 255, 0.137);
     background: #20232A;
     transition: .5s;
-  }
-  
-  .labelTest {
+}
+
+.labelTest {
     text-align: justify;
     margin-left: 5px;
-  }
-  
-  .testBlockInput {
+}
+
+.testBlockInput {
     display: flex;
     flex-direction: row;
-  }
-  
-  .startPractice {
+}
+
+.startPractice {
     display: flex;
     justify-content: center;
     align-items: center;
     max-width: 600px;
     margin: 0px auto;
-  }
-  
-  .practiceModule h4,
-  .tableTitlePracticle {
+}
+
+.practiceModule h4,
+.tableTitlePracticle {
     text-align: center;
     color: whitesmoke;
     font-size: 1.5em;
-  }
-  
-  .startPractice {
+}
+
+.startPractice {
     padding: 6px 3px;
     width: 320px;
     margin-bottom: 5px;
@@ -515,24 +514,24 @@ body {
     color: whitesmoke;
     transition: .5s;
     background-color: #20232A;
-  }
-  
-  .startPractice:hover {
+}
+
+.startPractice:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.137);
     transition: .5s;
     border: 1px solid rgba(220, 20, 60, 0.26);
-  }
-  
-  .tablePracticle {
+}
+
+.tablePracticle {
     display: flex;
     justify-content: center;
     line-height: 8px;
     font-size: 15px;
     color: rgba(255, 255, 255, 0.774);
-  }
-  
-  .doStart, .doEnd {
+}
+
+.doStart, .doEnd {
     display: none;
     text-align: center;
     margin: 40px auto 0px auto;
@@ -540,9 +539,9 @@ body {
     width: 320px;
     font-size: 1.5em;
     padding: 10px 0px;
-  }
-  
-  .doStart {
+}
+
+.doStart {
     width: 220px;
     height: 50px;
     border: none;
@@ -554,14 +553,14 @@ body {
     z-index: 0;
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.226);
-  }
-  
-  .doStart:before {
+}
+
+.doStart:before {
     content: '';
     background: linear-gradient(45deg, #ff000071, #ff730083, #fffb0088, #48ff008e, #00ffd58e, #002bff8e, #7a00ff8e, #ff00c88e, #ff00008e);
     position: absolute;
     top: -2px;
-    left:-2px;
+    left: -2px;
     background-size: 400%;
     z-index: -1;
     filter: blur(5px);
@@ -571,21 +570,21 @@ body {
     opacity: 0;
     transition: opacity .3s ease-in-out;
     border-radius: 10px;
-  }
-  
-  .doStart:active {
+}
+
+.doStart:active {
     color: #000
-  }
-  
-  .doStart:active:after {
+}
+
+.doStart:active:after {
     background: transparent;
-  }
-  
-  .doStart:hover:before {
+}
+
+.doStart:hover:before {
     opacity: 1;
-  }
-  
-  .doStart:after {
+}
+
+.doStart:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -595,15 +594,21 @@ body {
     left: 0;
     top: 0;
     border-radius: 10px;
-  }
-  
-  @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-  }
-  
-  .Timer {
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.Timer {
     display: none;
     width: 320px;
     justify-content: center;
@@ -612,26 +617,26 @@ body {
     color: rgba(255, 255, 255, 0.89);
     font-size: 2em;
     transition: .5s;
-  }
-  
-  .doEnd {
-    color: #FFF;
-    transition: all 0.5s;
-    position: relative; 
-    background-color: #20232A;
-  }
-  
-  .doEnd {
+}
+
+.doEnd {
     color: #FFF;
     transition: all 0.5s;
     position: relative;
-  }
-  
-  .doEnd:hover {
+    background-color: #20232A;
+}
+
+.doEnd {
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+
+.doEnd:hover {
     cursor: pointer;
-  }
-  
-  .doEnd::before {
+}
+
+.doEnd::before {
     content: '';
     position: absolute;
     top: 0;
@@ -639,16 +644,16 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    background-color: rgba(255,255,255,0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     transition: all 0.3s;
-  }
-  
-  .doEnd:hover::before {
-    opacity: 0 ;
-    transform: scale(0.5,0.5);
-  }
-  
-  .doEnd::after {
+}
+
+.doEnd:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+}
+
+.doEnd::after {
     content: '';
     position: absolute;
     top: 0;
@@ -658,38 +663,38 @@ body {
     z-index: 1;
     opacity: 0;
     transition: all 0.3s;
-    border: 1px solid rgba(255,255,255,0.5);
-    transform: scale(1.2,1.2);
-  }
-  
-  .doEnd:hover::after {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transform: scale(1.2, 1.2);
+}
+
+.doEnd:hover::after {
     opacity: 1;
-    transform: scale(1,1);
-  }
-  
-  .practiceDescription {
+    transform: scale(1, 1);
+}
+
+.practiceDescription {
     color: #ececece5;
     font-size: 1em;
     font-style: italic;
     max-width: 600px;
     margin: 0 auto 20px auto;
     text-align: justify;
-  }
-  
-  .practiceLine {
+}
+
+.practiceLine {
     width: 600px;
     margin: 20px auto;
-  }
-  
-  .practice {
+}
+
+.practice {
     padding-bottom: 80px;
-  }
-  
-  .dNone {
+}
+
+.dNone {
     display: none !important;
-  }
-  
-  .welcome {
+}
+
+.welcome {
     width: 800px;
     height: 100%;
     overflow: hidden;
@@ -698,19 +703,19 @@ body {
     align-items: center;
     margin: 0 auto;
     flex-direction: column;
-  }
-  
-  .welcome h1 {
+}
+
+.welcome h1 {
     font-size: 2em;
     color: white;
     margin-top: 50px;
-  }
-  
-  .welcome p {
+}
+
+.welcome p {
     color: rgba(245, 222, 179, 0.295);
-  }
-  
-  .theory {
+}
+
+.theory {
     max-width: 900px;
     margin: 0 auto;
     padding: 10px;
@@ -719,49 +724,49 @@ body {
     align-items: center;
     flex-direction: column;
     padding-bottom: 70px;
-  }
-  
-  .g-1 {
+}
+
+.g-1 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
-  
-  .g-1 h2 {
+}
+
+.g-1 h2 {
     color: white;
     font-size: 1.5em;
     text-align: center;
-  }
-  
-  .g-1 p {
+}
+
+.g-1 p {
     text-align: center;
     color: rgba(255, 255, 255, 0.863);
-  }
-  
-  .g-1 img {
+}
+
+.g-1 img {
     width: 400px;
-  }
-  
-  .ContainerProgramm {
+}
+
+.ContainerProgramm {
     margin-right: 300px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-  }
-  
-  .ContainerProgramm img {
+}
+
+.ContainerProgramm img {
     width: 200px;
     margin: 0 auto;
-  }
-  
-  .admin {
+}
+
+.admin {
     font-size: 1em;
-  }
-  
-  .by {
+}
+
+.by {
     position: absolute;
     top: 0;
     left: 0;
@@ -774,9 +779,9 @@ body {
     align-items: center;
     color: white;
     opacity: .5;
-  }
-  
-  .by:after{
+}
+
+.by:after {
     position: absolute;
     content: "";
     top: 0;
@@ -787,16 +792,16 @@ body {
     color: #fff;
     transition: all .35s;
     opacity: .5;
-  }
-  
-  .by:hover{
+}
+
+.by:hover {
     color: #fff;
-  }
-  
-  .by:hover:after{
+}
+
+.by:hover:after {
     width: 100%;
-  }
-  
-  .ContainerProgramm {
+}
+
+.ContainerProgramm {
     margin-bottom: 70px;
-  }
+}

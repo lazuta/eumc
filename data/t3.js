@@ -1,4 +1,4 @@
-export const t3 = {
+const t3 = {
     "id":"t3",
     "author": "Ахремчик",
     // 3 / 15

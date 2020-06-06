@@ -1,4 +1,4 @@
-export const t1 = {
+const t1 = {
     "id":"t1",
     "author": "Будько",
     "totalQuestions": 14,
